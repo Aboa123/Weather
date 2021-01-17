@@ -1,38 +1,78 @@
 .App {
-  text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contents {
+    display: inline-block;
+    width: 25%;
+    height: 80%;
+    border: 1px solid #222;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.warm {
+    background: url('./img/warm.jpg') no-repeat;
+    background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.cold {
+    background: url('./img/cold.jpg') no-repeat;
+    background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contents .search-text {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    width: 90%;
+    height: 40px;
+    font-size: 20pt;
+    background-color: rgba(221, 221, 221, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+}
+
+.contents .weather-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+}
+
+.contents .weather-form .weather {
+    font-size: 20pt;
+    color:white;
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.contents .weather-form .country {
+    font-size: 25pt;
+}
+
+.contents .weather-form .date {
+    font-size: 15pt;
+}
+
+.contents .weather-form .temperature {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: rgb(255, 250, 250, 0.5);
+    width: 40%;
+    height: 20%;
+    font-size: 35pt;
 }
